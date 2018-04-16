@@ -35,6 +35,12 @@ flutter:
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.io/assets-and-images/#from-packages
+  assets:
+    - icons/tab_home.png
+    - icons/tab_transfer.png
+    - icons/tab_receive_money.png
+    - icons/tab_top_up.png
+    - icons/tab_deal_making.png
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a

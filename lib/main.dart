@@ -21,7 +21,7 @@ class MainTabsState extends State<MainTabs>
   @override
   void initState() {
     super.initState();
-    controller = TabController(vsync: this, length: 3);
+    controller = TabController(vsync: this, length: 5);
   }
 
   @override
@@ -33,16 +33,21 @@ class MainTabsState extends State<MainTabs>
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      bottomNavigationBar: new Material(
-        color: Colors.deepOrange,
-        child: new TabBar(
-          controller: controller,
-          tabs: <Tab>[
-            new Tab(text: 'Bus', icon: new Icon(Icons.directions_bus)),
-            new Tab(text: 'Car', icon: new Icon(Icons.directions_car)),
-            new Tab(text: 'Subway', icon: new Icon(Icons.directions_subway)),
-          ],
+      backgroundColor: Color(0xFFF0F0F0),//#F0F0F0
+      bottomNavigationBar: new TabBar(
+        controller: controller,
+        labelColor: Color(0xFF3180FF),//#3180FF
+        unselectedLabelColor: Color(0xFF9A9A9A),//#9A9A9A
+        labelStyle: new TextStyle(
+          fontSize: 10.0
         ),
+        tabs: <Tab>[
+          new Tab(text: '首页', icon: new ImageIcon(new AssetImage("icons/tab_home.png"))),
+          new Tab(text: '转账', icon: new ImageIcon(new AssetImage("icons/tab_transfer.png"))),
+          new Tab(text: '收款', icon: new ImageIcon(new AssetImage("icons/tab_receive_money.png"))),
+          new Tab(text: '充值', icon: new ImageIcon(new AssetImage("icons/tab_top_up.png"))),
+          new Tab(text: '撮合交易', icon: new ImageIcon(new AssetImage("icons/tab_deal_making.png"))),
+        ],
       ),
       body: new TabBarView(
         controller: controller,
@@ -50,6 +55,8 @@ class MainTabsState extends State<MainTabs>
           new Icon(Icons.directions_bus),
           new Icon(Icons.directions_car),
           new Icon(Icons.directions_subway),
+          new Icon(Icons.directions_bike),
+          new Icon(Icons.directions_boat),
         ],
       ),
     );
