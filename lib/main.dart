@@ -41,6 +41,7 @@ class MainTabsState extends State<MainTabs>
         labelStyle: new TextStyle(
           fontSize: 10.0
         ),
+        indicatorWeight: 0.1,
         tabs: <Tab>[
           new Tab(text: '首页', icon: new ImageIcon(new AssetImage("icons/tab_home.png"))),
           new Tab(text: '转账', icon: new ImageIcon(new AssetImage("icons/tab_transfer.png"))),
